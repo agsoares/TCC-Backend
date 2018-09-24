@@ -1,0 +1,11 @@
+.npm
+.tmp
+.vscode/
+node_modules
+.firebaserc
+firebase-debug.log
+npm-debug.log
+lerna-debug.log
+*~
+service-account-credentials.json
+.DS_Store
