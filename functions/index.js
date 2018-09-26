@@ -18,16 +18,11 @@ exports.createUserData = functions
         var userPromise = db.collection("users")
             .doc(user.uid)
             .set(userData)
-            .then(function () {
-                console.log("Document successfully written!");
-            });
+
         var accountPromise = db.collection('users')
             .doc(user.uid)
             .collection('accounts')
             .add(accountsData)
-            .then(function () {
-                console.log("Document successfully written!");
-            });
 
         return Promise.all([userPromise, accountPromise])
 });
